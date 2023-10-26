@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.qcontainer{
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    padding: 0px 20px;
+}
+
+.sec{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.qname{
+    
+    color: #fff;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.qname:hover{
+    color: #013440;
+}
+.qcards{
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+#third{
+    margin-left: 26rem;
+}
+#first:hover{
+    padding: 50px;
+    font-size: 25px;
+}
+#third:hover{
+    padding: 50px;
+    font-size: 25px;
+}
+#second:hover{
+    padding: 50px;
+    font-size: 25px;
+}
+
+.qcard{
+    flex: 0 0 calc(33.33% - 20px);
+    max-width:calc(33.33% - 20px) ;
+
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    
+    border: 3px solid transparent;
+}
+
+.qcard:hover{
+    background-color: #013440;
+    
+    color: #fff;
+    
+}
+
+
+@media(max-width: 969px){
+    section{
+        padding: 20px 0px;
+    }
+    .qname{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .qcard{
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+    #third{
+        margin-left: 0rem;
+    }
+    #first{
+        margin-left: 0rem;
+    }
+    #second{
+        margin-left: 0rem;
+    }
+}
+
+@media(max-width: 600px){
+
+    .qcard{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #third{
+        margin-left: 0rem;
+    }
+    #first{
+        margin-left: 0rem;
+    }
+    #second{
+        margin-left: 0rem;
+    }
+}

@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*{
+    max-height: "100dvh"
+}
+body{
+   max-width: 100vw;
+}
+.back{
+    position: absolute;
+    width: max-content;
+    perspective: 500px;
+    top:50%;
+    left:50%;
+    transform: translate(-50% ,-50%);
+}
+.name{
+text-align: center;
+    font-size: 12rem;
+    font-size: 700;
+    transform-style: preserve-3d;
+    animation: anim 5s alternate infinite;
+    color: rgb(72, 34, 34);
+}
+
+@keyframes anim{
+    0%{
+        transform: rotateX(-10deg) rotateY(-35deg);
+        text-shadow: 0 2px 2px rgb(69, 16, 16), 
+        2px -5px 1px rgb(69, 16, 16),
+        4px -8px 1px rgb(69, 16, 16), 
+        6px -11px 1px rgb(69, 16, 16), 
+        8px -14px 1px rgb(69, 16, 16), 
+        10px -17px 1px rgb(69, 16, 16), 
+        12px -20px 1px rgb(69, 16, 16), 
+        14px -23px 1px rgb(69, 16, 16), 
+        16px -26px 1px rgb(69, 16, 16), 
+        18px -29px 1px rgb(69, 16, 16)
+    }
+    100%{
+        transform: rotateX(25deg) rotateY(20px);
+        text-shadow: 0 2px 2px rgb(110, 73, 73), 
+        -2px 5px 1px rgb(110, 73, 73),
+        -4px 8px 1px rgb(110, 73, 73), 
+        -6px 11px 1px rgb(110, 73, 73), 
+        -8px 14px 1px rgb(110, 73, 73), 
+        -10px 17px 1px rgb(110, 73, 73), 
+        -12px 20px 1px rgb(110, 73, 73), 
+        -14px 23px 1px rgb(110, 73, 73), 
+        -16px 26px 1px rgb(110, 73, 73), 
+        -18px 29px 1px rgb(110, 73, 73)
+    }
+}

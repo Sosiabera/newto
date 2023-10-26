@@ -1,0 +1,155 @@
+*{
+    max-height: "100dvh"
+}
+.parent{
+    text-align: center;
+    width: fit-content;
+    margin-left: 8%;
+}
+.levels{
+    max-width: 400px;
+    border-radius: 1rem;
+    margin: 0.5rem;
+}
+.levelsactive{
+
+    max-width: 400px;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    filter : blur(6px)
+}
+.CardImg{
+max-width: 100%;
+box-shadow: 5px 10px 15px  #111111;
+
+}
+.Levelname{
+    padding: 0 auto;
+    margin: 0 auto;
+    font-size: 5rem;
+    margin-left: 12rem;
+    color:  #5e787d;;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #425052;
+}
+@media (min-width: 969px){
+.levels:hover{
+    min-width:  450px;
+    margin-top: -15%;
+}
+.parent:hover .levels:not(:hover){
+    max-width: 350px;
+    filter: blur(8px);
+    z-index: 0;
+}
+.levels:not(:hover) .place{
+    display: none;
+}
+.backColor:hover{
+    background-color: #cbc7c7;
+    opacity: 0.5;
+    scale: 1.1;
+}
+.place{
+    position:absolute;
+    margin-left:3%;
+    margin-top: -38rem;
+    padding: 0;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 5rem;
+    z-index: 2;
+    letter-spacing: 2px;
+    font-weight: 900;
+    color: #053641;
+    text-shadow: -1px -1px 3px #03161c, 
+    2px 2px 4px  #21616f;
+}
+}
+
+.Imgplace.levels{
+    min-width:  450px;
+    margin-top: -15%;
+}
+.coffee{
+    position: absolute;
+    display: inline;
+    margin-top: 0.5rem;
+
+}
+.lock{
+    position: absolute;
+    display: inline;
+    margin-top: -20%;
+
+}
+.totalbuna{
+    position: absolute;
+    left: 90%;
+    display:flex;
+    gap: 10px;
+}
+.LeftArrow{
+    position: fixed;
+    margin-left: 3%  ;
+    z-index: 3;
+    opacity: 1;
+    top: 50%;
+    transform: translateY( -50%);
+}
+.RightArrow{
+    position: fixed;
+    margin-right: 3%;
+    z-index: 3;
+    opacity: 1;
+    top: 50%;
+    transform: translateY( -50%);
+}
+.backColor{
+    position: fixed;
+    background-color: #ffff;
+    opacity: 0.5;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    z-index: 3;
+    top: 50%;
+transform: translateY( -50%);
+}
+
+
+@media (max-width: 1000px){
+    .place{
+        display: none;
+    }
+}
+
+
+@media(max-width: 600px){
+    .parent{
+        margin: 0;
+    }
+    .levels{
+        width: 370px;
+        margin: 0;
+        margin-left: 2rem;
+    }
+    .lock{
+        margin-top: -60%;
+    
+    }
+    .totalbuna{
+        left: 85%;
+    }
+    .Levelname{
+        margin-top: 1rem;
+    }
+    .place{
+        display: none;
+    }
+    .levelsactive{
+        width: 370px;
+        margin: 0;
+        margin-left: 2rem;
+    }
+}
