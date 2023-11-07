@@ -1,0 +1,17 @@
+.bgContainer1,
+.bgContainer2,
+.bgContainer3{
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bgContainer1{
+    background-image: linear-gradient(to top, #001E23, rgba(255, 0, 0, 0)), url("/image/ho.jpg");
+}
+.bgContainer2{
+    background-image: linear-gradient(to top, #001E23, rgba(255, 0, 0, 0)), url("/image/lo.jpg");
+}
+.bgContainer3{
+    background-image: linear-gradient(to top, #001E23, rgba(255, 0, 0, 0)), url("/image/po.jpg");
+}
