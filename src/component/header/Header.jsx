@@ -55,7 +55,7 @@ const Header = () => {
   return (
     <div className="flex items-center mt-[40px]">
       {/*text contet */}
-      <div className="w-1/2 pl-[140px]">
+      <div className=" pl-[140px]">
         {classChange}
 
         <div className="mt-[100px] flex gap-12">
