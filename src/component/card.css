@@ -5,6 +5,7 @@
     text-align: center;
     width: fit-content;
     margin-left: 8%;
+    
 }
 .levels{
     max-width: 400px;
@@ -34,30 +35,28 @@ box-shadow: 5px 10px 15px  #111111;
 }
 @media (min-width: 969px){
 .levels:hover{
-    min-width:  450px;
-    margin-top: -15%;
+    transform: scale(105%);
+   
 }
 .parent:hover .levels:not(:hover){
-    max-width: 350px;
-    filter: blur(8px);
+    transform: scale(90%);
+    filter: blur(3px);
     z-index: 0;
 }
 .levels:not(:hover) .place{
     display: none;
 }
 .backColor:hover{
-    background-color: #cbc7c7;
     opacity: 0.5;
-    scale: 1.1;
 }
 .place{
     position:absolute;
-    margin-left:3%;
-    margin-top: -38rem;
+    margin-left:8%;
+    margin-top: -34rem;
     padding: 0;
     writing-mode: vertical-lr;
     text-orientation: upright;
-    font-size: 5rem;
+    font-size: 4.6rem;
     z-index: 2;
     letter-spacing: 2px;
     font-weight: 900;
@@ -108,7 +107,7 @@ box-shadow: 5px 10px 15px  #111111;
 .backColor{
     position: fixed;
     background-color: #ffff;
-    opacity: 0.5;
+    opacity: 0.3;
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
