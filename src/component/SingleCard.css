@@ -1,19 +1,45 @@
-.card{
+.fullCards{
+    perspective: 500;
+}
+.scard{
     position: relative;
 }
 
-.card img{
+.scard img{
     width: 90%;
     display: block;
     border: 2px solid #fff;
     border-radius: 6px;
 }
 
-.card .front{
+.scard .front{
     transform: rotateY(90deg);
     position: absolute;
 }
 
 .flipped .front {
+    animation: flip 2s;
     transform: rotateY(0deg);
-}
+  }
+  .failed{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+  }
+  .failed h1{
+    text-align: center;
+    color:rgb(0, 12, 249)
+  }
+
+  
+  @keyframes flip{
+      0%{
+        opacity: 0;
+      }
+      100%{
+          opacity: 100;
+      }
+  }
+  
+

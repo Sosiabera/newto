@@ -5,16 +5,6 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-<<<<<<< HEAD
-    fontFamily:{
-   
-      BebasNeue: ['Bebas Neue' , 'sans-serif'],
-      DancingScript: ['Dancing Script' , 'cursive'],
-      Montserrat: ['Montserrat' , 'sans-serif'],
-      Poppins: ['Poppins' , 'sans-serif'],
-   
-      },
-=======
 
    fontFamily:{
    
@@ -25,7 +15,6 @@ export default {
 
    },
 
->>>>>>> d136adbdf9564024aa588f67c9a4527497cb72f4
     extend: {},
   },
   plugins: [],

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './match.css'
-import SingleCard from './components/SingleCard'
+import SingleCard from '../component/SingleCard'
 
 const cardImages = [
 
@@ -29,9 +29,19 @@ const shuffleCards = () =>{
 
 }
 
+
 const handleChoice = (card) =>{
 choiceOne ? setChoiceTwo(card): setChoiceOne(card)
 }
+let win;
+function allAreTrue(cards) {
+ 
+  return ( cards.matched === true);
+ 
+}
+
+turns===0 ? win =false :  win = cards.every(allAreTrue) 
+
 
 useEffect(() => {
   if(choiceOne && choiceTwo){
@@ -52,21 +62,27 @@ useEffect(() => {
   }
 }, [choiceOne, choiceTwo])
 
-console.log(cards)
 
 const resetTurn = () =>{
   setChoiceOne(null)
   setChoiceTwo(null)
   setTurns(prevTurns => prevTurns + 1)
 }
+let failPoint = 10;
 
   return(
     <div className="match">
       <h1> yee</h1>
       <button onClick={shuffleCards}>New Game</button>
+      <div className='side'>
+  <h3>Moves</h3>
+  <h4>{failPoint-turns}</h4>
+</div>
     <div className="card-grid">
       {cards.map(card => (
         <SingleCard 
+        win={win}
+        turns={turns}
         key={card.id} 
         card={card}
         handleChoice={handleChoice}

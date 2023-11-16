@@ -2,7 +2,10 @@
     max-width: 860px;
     margin: 40px auto;
   }
-  button{
+  .match h1{
+   text-align: center;
+  }
+  button{  
     background: none;
     border: 2px solid #fff;
     padding: 6px 12px;
@@ -23,4 +26,15 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap:20px;
   }
- 
+  .side{
+    position: absolute;
+    right:100%;
+    transform: translateX(100%);
+  }
+  .side h3{
+    display: inline;
+  }
+  .side h4{
+    display: inline;
+
+  }
