@@ -1,12 +1,12 @@
 import "./App.css";
 
-import Match from "./pages/match";
+import RouthPath from "./pages/route";
 function App() {
 // <RouthPath />;
   //import RouthPath from "./pages/route";
   return(
 <>
-<Match />
+<RouthPath />
 
 </>
   )

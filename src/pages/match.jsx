@@ -73,10 +73,17 @@ let failPoint = 10;
   return(
     <div className="match">
       <h1> yee</h1>
-      <button onClick={shuffleCards}>New Game</button>
       <div className='side'>
   <h3>Moves</h3>
   <h4>{failPoint-turns}</h4>
+  <button
+  className='NewGame'
+   onClick={shuffleCards}>New Game</button>
+  <div className="btn-group-vertical diff" role="group" aria-label="Vertical button group">
+  <button type="button " className="btn btn-primary  easy">Easy</button>
+  <button type="button " className="btn btn-primary medium">Medium</button>
+  <button type="button " className="btn btn-primary hard">hard</button>
+</div>
 </div>
     <div className="card-grid">
       {cards.map(card => (

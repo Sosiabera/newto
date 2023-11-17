@@ -5,7 +5,7 @@
   .match h1{
    text-align: center;
   }
-  button{  
+  .NewGame{
     background: none;
     border: 2px solid #fff;
     padding: 6px 12px;
@@ -15,7 +15,7 @@
     cursor: pointer;
     font-size: 1em;
   }
-  button:hover{
+  .NewGame:hover{
     background: #c23866;
     color: #fff;
   }
@@ -33,8 +33,23 @@
   }
   .side h3{
     display: inline;
+    margin-left: 1rem;
   }
   .side h4{
+    margin-left: 1rem;
     display: inline;
 
+  }
+  .diff{
+   
+
+  }
+  .easy{
+    margin: 1rem;
+  }
+  .medium{
+    margin: 1rem;
+  }
+  .hard{
+    margin: 1rem;
   }

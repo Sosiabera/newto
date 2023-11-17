@@ -13,7 +13,7 @@ export default function LevelCard() {
   let ImgProp = [
     {
       name: "ብሔራዊ",
-      img: "/image/final beharaw1.png",
+      img: "/image/final beharaw 2.png",
       Level: "፩",
       q1complete: 100,
       q2complete: 100,
@@ -22,7 +22,7 @@ export default function LevelCard() {
     },
     {
       name: "መርካቶ",
-      img: "/image/markato1.png",
+      img: "/image/markato 2.png",
       Level: "፪",
       q1complete: 100,
       q2complete: 100,
@@ -31,7 +31,7 @@ export default function LevelCard() {
     },
     {
       name: "ፒያሳ",
-      img: "/image/piassa.png",
+      img: "/image/piassa 2.png",
       Level: "፫",
       q1complete: 25,
       q2complete: 56,
@@ -40,7 +40,7 @@ export default function LevelCard() {
     },
     {
       name: "4ኪሎ",
-      img: "/image/4kilo.png",
+      img: "/image/4-kilo 2.png",
       Level: "፬",
       q1complete: 0,
       q2complete: 0,
@@ -49,7 +49,7 @@ export default function LevelCard() {
     },
     {
       name: "ብሄራዊ",
-      img: "/image/4kilo.png",
+      img: "/image/4-kilo 2.png",
       Level: "፭",
       q1complete: 0,
       q2complete: 0,
@@ -58,7 +58,7 @@ export default function LevelCard() {
     },
     {
       name: "ብሄራዊ",
-      img: "/image/final beharaw.png",
+      img: "/image/final beharaw 2.png",
       Level: "፮",
       q1complete: 0,
       q2complete: 0,
@@ -67,7 +67,7 @@ export default function LevelCard() {
     },
     {
       name: "ብሄራዊ",
-      img: "/image/final beharaw.png",
+      img: "/image/final beharaw 2.png",
       Level: "፮",
       q1complete: 0,
       q2complete: 0,
@@ -76,7 +76,7 @@ export default function LevelCard() {
     },
     {
       name: "ብሄራዊ",
-      img: "/image/final beharaw.png",
+      img: "/image/final beharaw 2.png",
       Level: "፮",
       q1complete: 0,
       q2complete: 0,
@@ -85,7 +85,7 @@ export default function LevelCard() {
     },
     {
       name: "ብሄራዊ",
-      img: "/image/final beharaw.png",
+      img: "/image/final beharaw 2.png",
       Level: "፮",
       q1complete: 0,
       q2complete: 0,
@@ -143,6 +143,9 @@ export default function LevelCard() {
     }
   };
   clearTimeout(handleclick);
+  const handleclickToGame =()=>{
+    navigate("ExtraGame");
+  }
   const handleArrowRClick =()=>{
     if (count != ImgProp.length) {
       setcount((prevcount) => prevcount + 3);
@@ -212,9 +215,13 @@ export default function LevelCard() {
               <div
                 key={index}
                 className="col ImgPlace"
-                onClick={() => handleclick(arr.name, arr.min, arr.Level)}
               >
                 <h1 className="Levelname ">{arr.Level}</h1>
+                <div className="scoffee">
+                  <Buna completes={arr.q1complete} />
+                  <Buna completes={arr.q2complete} />
+                  <Buna completes={arr.q3complete} />
+                </div>
                 <div
                   className={totalvalue < arr.min ? "levelsactive" : "levels"}
                 >
@@ -222,22 +229,21 @@ export default function LevelCard() {
                     className="CardImg  "
                     src={arr.img}
                     alt={arr.name}
+                    onClick={() => handleclick(arr.name, arr.min, arr.Level)}
                     ref={refs}
                   />
+      
                   {totalvalue >= arr.min && (
                     <h1
                       ref={refs}
                       className="place"
+                      onClick={() => handleclick(arr.name, arr.min, arr.Level)}
                     >
                       {arr.name}
                     </h1>
                   )}
                 </div>
-                <div className="coffee">
-                  <Buna completes={arr.q1complete} />
-                  <Buna completes={arr.q2complete} />
-                  <Buna completes={arr.q3complete} />
-                </div>
+             
                 {totalvalue < arr.min && (
                   <div className="lock">
                     <FaLock size={40} color="#9f9b9b" />
@@ -247,6 +253,19 @@ export default function LevelCard() {
             ))}
           </div>
         </div>
+        <button 
+        className="ExtraGame"
+         onClick={() => handleclickToGame()} >
+    P L A Y
+    <div id="clip">
+        <div id="leftTop" className="corner"></div>
+        <div id="rightBottom" className="corner"></div>
+        <div id="rightTop" className="corner"></div>
+        <div id="leftBottom" className="corner"></div>
+    </div>
+    <span id="rightArrow" className="arrow"></span>
+    <span id="leftArrow" className="arrow"></span>
+</button>
         </Move>
     </>
   );

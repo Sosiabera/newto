@@ -6,9 +6,9 @@ function Full() {
   return (
     <>
       <HelmetProvider>
-        <div style={{ backgroundcolor: "#5e787d" }}>
+        <div style={{ backgroundcolor: "#000" }}>
           <Helmet>
-            <style>{"body { background-color: #5e787d; }"}</style>
+            <style>{"body { background-color: #000; }"}</style>
           </Helmet>
           <LevelCard />
         </div>

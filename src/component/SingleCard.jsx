@@ -44,7 +44,7 @@ function refreshPage() {
   <button onClick={refreshPage}>Click to reload!</button>
 </div>:null}
 
-    {turns >=failPoint ?
+    {turns >=failPoint && win !=true ?
       <div className='failed'>
         <h1>Sorry, You have run out of moves</h1>
        <img  className="front" src="/image/sad.png" alt="failed" />
