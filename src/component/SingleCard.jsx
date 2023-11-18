@@ -3,7 +3,7 @@ import './SingleCard.css'
 import styled, {keyframes} from "styled-components";
 import { useWindowSize } from "@uidotdev/usehooks";
 import Confetti from 'react-confetti'
-export default function SingleCard({win,turns, card, handleChoice, flipped }) {
+export default function SingleCard({win,turns, card, handleChoice, flipped, disabled }) {
 
 
 const [clicked,setclicked]=useState("")
@@ -14,9 +14,11 @@ const { width, height } = useWindowSize()
 
 
     const handleClick = () =>{  
-      if(turns<failPoint){ 
+      if(turns<failPoint){
+        if(!disabled){ 
         handleChoice(card )
         setclicked("clicked");
+        }
       }
         setTimeout(() => {
             setclicked("none");
