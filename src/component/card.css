@@ -2,6 +2,8 @@
     max-height: "100dvh"
 }
 .parent{
+  display: flex;
+  flex-wrap: wrap;
     text-align: center;
     width: fit-content;
     margin-left: 8%;
@@ -27,11 +29,20 @@ box-shadow: 0 0 10px #041E42,
 background-color: #041E42;
 
 }
+#first{
+  border-bottom-left-radius: 30%;
+}
+#second{
+
+}
+#third{
+  border-bottom-left-radius: 30%;
+}
 .Levelname{
     padding: 0 auto;
     margin: 0 auto;
     font-size: 4.5rem;
-    margin-left: 12rem;
+    margin-left: 10rem;
     color:  #000;;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #7d8b8e;
@@ -74,9 +85,9 @@ background-color: #041E42;
     margin-top: -15%;
 }
 .scoffee{
-    position:absolute;
-    margin-top: 450px;
-    margin-left: 410px;
+   
+    margin-top: -80px;
+    margin-left: 390px;
 }
 .lock{
     position: absolute;

@@ -96,17 +96,8 @@ export default function LevelCard() {
   //end level
   const [count, setcount] = useState(3);
   //holds the level to be displayed
-  let NewArr = [
-    {
-      id: "first",
-    },
-    {
-      id: "second",
-    },
-    {
-      id: "third",
-    },
-  ];
+  let NewArr = [];
+
   //index of the above, only till 2
   let num = 0;
   //adds the level to the display array by looping over the database array
@@ -217,22 +208,22 @@ export default function LevelCard() {
                 className="col ImgPlace"
               >
                 <h1 className="Levelname ">{arr.Level}</h1>
-                <div className="scoffee">
-                  <Buna completes={arr.q1complete} />
-                  <Buna completes={arr.q2complete} />
-                  <Buna completes={arr.q3complete} />
-                </div>
+               
                 <div
                   className={totalvalue < arr.min ? "levelsactive" : "levels"}
                 >
                   <img
-                    className="CardImg  "
+                    className="CardImg "
                     src={arr.img}
                     alt={arr.name}
                     onClick={() => handleclick(arr.name, arr.min, arr.Level)}
                     ref={refs}
                   />
-      
+                   <div className="scoffee">
+                  <Buna completes={arr.q1complete} />
+                  <Buna completes={arr.q2complete} />
+                  <Buna completes={arr.q3complete} />
+                </div>
                   {totalvalue >= arr.min && (
                     <h1
                       ref={refs}
