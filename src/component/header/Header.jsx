@@ -4,6 +4,8 @@ import Buna from "../buna";
 import {} from "react-icons/fa";
 import Slider from "../../assets/slider/Slider";
 import { MyContext } from "../../assets/context/AppContext";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const db = [
   {
@@ -75,6 +77,9 @@ const Header = (prop) => {
   ];
 
   const { activeSlideIndex } = useContext(MyContext);
+  const [answer,setanswer] =useState("")
+
+  
 
   const handleClass = (activeSlideIndex) => {
     const { letter, textq, complete  } = contentData[activeSlideIndex] || {};
@@ -82,22 +87,25 @@ const Header = (prop) => {
     if (letter && textq) {
       return (
         <div>
-          <h1>{prop.prop}</h1>
-          <h1 className="text-[70px] text-white font-Montserrat font[50] leading-[40px]">
-            <br />
-            <span className={`letter ${letter}`} data-letter={letter}>
-              {letter}
-            </span>
-          </h1>
-          <div className="text-[30px] text-white font-Montserrat font[50]">
+          <h1 className="title">{prop.prop}</h1>
+
+          <div className=" quesion ">
             <p className={`textq ${textq}`} data-textq={textq}>
               {textq}
             </p>
           </div>
           
-        <div className="mt-[100px] flex gap-12">
+        <div className="Ibuna">
         <Buna completes={ complete} />
         </div>
+
+       <form>
+        <input 
+        type="text"
+        onChange={(e)=> setanswer(e.target.value)}
+        />
+       </form>
+
         </div>
       );
     }

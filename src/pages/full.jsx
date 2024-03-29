@@ -1,5 +1,6 @@
 
-import LevelCard from "../component/card";
+
+import Arrow from "../component/arrow";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 function Full() {
 
@@ -10,7 +11,7 @@ function Full() {
           <Helmet>
             <style>{"body { background-color: #000; }"}</style>
           </Helmet>
-          <LevelCard />
+          <Arrow />
         </div>
       </HelmetProvider>
     </>
