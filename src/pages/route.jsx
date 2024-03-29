@@ -4,7 +4,7 @@ import Home from "../component/home/Home";
 import Match from "./match";
 export default function RouthPath() {
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename={"/newto/"}>
       <Routes>
         <Route path="/" exact element={<Full />} />
         <Route path="/level" element={<Home />} />
